@@ -1,0 +1,19 @@
+<h1>User #<%= @user.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @user.name %></p>
+</div>
+<div>
+  <strong>Email</strong>:<br />
+  <p><%= @user.email %></p>
+</div>
+
+<a href="/users/<%= @user.id %>/edit">Edit</a> |
+<a href="/users/<%= @user.id %>/destroy">Destroy</a>
+
+<ul>
+  <% @bookmark.each do |bookmark| %>
+  <li><img src="<%= bookmark.url %>" %></li>
+  <% end %>
+</ul>
